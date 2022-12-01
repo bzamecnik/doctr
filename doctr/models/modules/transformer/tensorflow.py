@@ -13,7 +13,8 @@ from doctr.utils.repr import NestedObject
 
 __all__ = ["Decoder", "PositionalEncoding", "EncoderBlock"]
 
-tf.config.run_functions_eagerly(True)
+# NOTE: This may crash code which does not expect the eager mode.
+# tf.config.run_functions_eagerly(True)
 
 
 class PositionalEncoding(layers.Layer, NestedObject):
